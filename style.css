@@ -8,6 +8,12 @@ body {
     background-position: center;
 }
 
+body {
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en una columna */
+    min-height: 100vh; /* Asegura que el body tenga al menos la altura de la ventana */
+}
+
 h1 {
     text-align: center;
     font-size: 28px;
@@ -200,12 +206,13 @@ tr:nth-child(even) {
     font-size: 12px;
 }
 
+
 footer {
     background-color: #333;
     color: #fff;
     padding: 10px;
     text-align: center;
-    margin: 0;
+    margin-top: auto; /* Empuja el footer hacia abajo */
 }
 
 /* Media Queries para Responsividad */
@@ -218,5 +225,8 @@ footer {
     }
     .table-container {
         min-width: 100%; /* Asegura que la tabla se ajuste al contenedor */
+    }
+    footer {
+        flex-direction: column; /* Asegura que la tabla se ajuste al contenedor */
     }
 }

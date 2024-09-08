@@ -139,6 +139,12 @@ button.btn:hover {
     background-position: center;
 }
 
+.resultado-container li {
+    margin-bottom: 10px;
+    list-style-type: none;
+}
+
+
 .table-container {
     overflow-x: auto; /* Habilita el desplazamiento horizontal si es necesario */
     -webkit-overflow-scrolling: touch; /* Suaviza el desplazamiento en dispositivos táctiles */
@@ -203,7 +209,7 @@ footer {
 }
 
 /* Media Queries para Responsividad */
-@media (max-width: 768px) {
+@media (max-width: 90%) {
     .header-container {
         flex-direction: column; /* Apila elementos verticalmente en pantallas más pequeñas */
     }

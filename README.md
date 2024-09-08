@@ -2,7 +2,7 @@
 ---
 
 ## Descripción del Repositorio: Generador de Tabla de Amortización con PDF Descargable
-
+-
 Este repositorio presenta un generador de tabla de amortización interactivo que permite a los usuarios calcular cuotas mensuales, intereses acumulados, capital acumulado, y más. La aplicación está desarrollada utilizando HTML, CSS, y JavaScript, con la capacidad de generar un PDF descargable de los resultados.
 ---
 ### Características Principales

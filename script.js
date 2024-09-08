@@ -221,6 +221,7 @@ document.getElementById('reiniciar').addEventListener('click', function() {
     document.getElementById('resultado-interesapagar').textContent = '';
     document.getElementById('resultado-interespromedio').textContent = '';
     document.getElementById('resultado-comision-retiro').textContent = '';
+    document.getElementById('dia-de-pago').value = '';
 
     // Limpiar la tabla de amortización
     var tabla = document.getElementById('tabla-amortizacion');
@@ -246,6 +247,10 @@ document.getElementById('reiniciar').addEventListener('click', function() {
     if (fechaPago) {
         fechaPago.style.display = 'none';
     }
+    document.getElementById('limpiar-boton').addEventListener('click', function() {
+        document.getElementById('dia-de-pago').value = '';
+    });
+    
 });
 
 function toggleMenu() {

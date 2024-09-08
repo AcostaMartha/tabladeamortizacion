@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acostam82 - Proyectos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+
+        <nav id="titulo"> <div id="titulo">Acostam82 - Proyectos</div>
+      
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="header-container">
+                <img src="img/Logo.png" alt="Logo" class="logo">
+                <div class="title-container">
+                    <h1>Calculadora de Amortización</h1>
+                    <p>Calculadora de tabla Amortización</p>
+                </div>
+            </div>
+            <div class="input-container">
+                <label for="monto">Monto del Préstamo:</label>
+                <input type="number" id="monto" min="0" placeholder="Ingrese el monto">
+            </div>
+            <div class="input-container">
+                <label for="interes">Tasa de Interés (%):</label>
+                <input type="number" id="interes" min="35" step="0.01" placeholder="Ingrese la tasa de interés">
+            </div>
+            <div class="input-container">
+                <label for="plazo">Plazo del Préstamo (meses):</label>
+                <select id="plazo">
+                    <option value="12">12 meses</option>
+                    <option value="24">24 meses</option>
+                    <option value="36">36 meses</option>
+                    <option value="48">48 meses</option>
+                    <option value="60">60 meses</option>
+                </select>
+            </div>
+            <div class="checkbox-container">
+                <label for="es-retiro-efectivo">
+                    Retiro en Efectivo (Comisión 6.25%)<input type="checkbox" id="es-retiro-efectivo"> 
+                </label>
+            </div>
+            
+    <!-- Botón para reiniciar -->
+    
+            <div class="button-container">
+                <button id="calcular" class="btn btn-calcular"><i class="fas fa-calculator"></i> Calcular Tabla</button>
+                <button id="reiniciar" class="btn btn-reiniciar"><i class="fas fa-redo"></i> Reiniciar</button>
+            </div>
+    
+            <div id="resultados" class="resultado-container" style="display: none;">
+                <h2>Resultados</h2>
+                <span id="resultado-cuota" class="resultado-item"></span>
+                <span id="resultado-totalapagar" class="resultado-item"></span>
+                <span id="resultado-interesapagar" class="resultado-item"></span>
+                <span id="resultado-interespromedio" class="resultado-item"></span>
+                <span id="resultado-comision-retiro" class="resultado-item">></span> 
+            </div>          
+            
+            <div id="resultados" style="display: none;">
+                <div id="total-pagado">Total Pagado: 0.00</div>
+                <div id="monto-restante">Monto Restante: 0.00</div>
+            </div>
+            
+            <!-- Formulario para fecha de pago-->
+            <div id="fecha-pago" class="resultado-container" style="display: none;">
+                <button id="descargar-pdf" class="btn btn-descargar" style="display: none;">
+                    <i class="fas fa-download"></i> Descargar Tabla PDF
+                </button>
+                <input type="checkbox" id="incluir-fecha" placeholder="Incluir fecha de pago">
+                <label for="incluir-fecha">Incluir fecha de pago</label>          
+
+                <div id="IncluirFecha" class="" style="display: none;">
+                    <input type="number" id="dia-de-pago" min="1" max="31" placeholder="Día de pago">
+                </div>
+            </div>
+            
+    
+            <div class="table-container" >
+                <table id="tabla-amortizacion" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th>Cantidad Cuotas</th>
+                            <th>Capital</th>
+                            <th>Interés</th>
+                            <th>Cuota Mensual</th>
+                            <th>Balance Capital</th>
+                            <th>Balance Interés</th>
+                            <th>Capital Acumulado</th>
+                            <th>Interes Acumulado</th>
+                            <th>Pagos Acumulados</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Aquí se generará la tabla de amortización -->
+                    </tbody>
+                </table>
+            </div>
+    
+            
+            <div id="info-tarjeta-credito">
+                <h2>
+                    <span style="font-weight: bold;">Importante</span>
+                    <i class="fas fa-exclamation-triangle" style="color: red;"></i>
+                </h2>
+                <p>
+                    Los cálculos presentados son aproximados y pueden variar según condiciones específicas.
+                </p>
+            </div>
+
+        </div>
+        
+      
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <!-- Contenido del pie de página -->
+            <p>&copy; 2024 // Martha Acosta ♥</p>
+            <p style="font-size: 9px">Cristo Te AMA!</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.13/jspdf.plugin.autotable.min.js"></script>
+   <!-- Incluir la biblioteca docx desde el CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/docx/7.7.0/docx.umd.min.js"></script>
+
+
+</body>
+</html>
+
+
+
+    

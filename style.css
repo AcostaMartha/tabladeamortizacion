@@ -1,0 +1,268 @@
+body {
+    font-family: 'Roboto', sans-serif; 
+    background-color: #F5F5F5;
+    color: #333;
+    margin: 0;
+
+    background-image: url(img/logodefondo.png);
+    background-size: cover;
+    background-position: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-top: 20px;
+    color: #222;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; /* Centra verticalmente */
+    text-align: center; /* Alinea el texto en el centro */
+    gap: 15px; /* Espacio entre el logo y el contenedor del título */
+    padding: 15px;
+}
+
+#titulo {
+    background-color: #969696b4;
+    color: #545454;
+    padding: 5px;
+}
+
+
+.logo {
+    height: 30px; /* Ajusta la altura del logo según tus necesidades */
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column; /* Organiza el contenido verticalmente */
+    align-items: center; /* Centra el texto horizontalmente dentro del contenedor */
+}
+
+h1 {
+    margin: 0; /* Elimina el margen predeterminado del título */
+}
+
+p {
+    margin: 0; /* Elimina el margen predeterminado del párrafo */
+}
+
+
+
+.input-container,
+.checkbox-container {
+    display: flex; /* Mantenemos flexbox */
+    flex-direction: row; /* Dirección horizontal */
+    flex-wrap: wrap; /* Permite ajustar los elementos en múltiples líneas */
+    align-items: center; /* Alinea los elementos verticalmente al centro */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    width: 53%; /* Mantén el ancho */
+    margin: 20px auto; /* Centra el contenedor en la página */
+    
+}
+
+.input-container label,
+.checkbox-container label {
+    font-size: 14px; /* Ajusta el tamaño de fuente según sea necesario */
+    color: #333; /* Color del texto */
+    flex: 1 1 100%; /* Asegura que los labels ocupen el ancho completo disponible */
+    text-align: left; /* Alinea el texto de los labels a la izquierda */
+    margin-bottom: 8px; /* Añade un poco de espacio debajo de los labels */
+}
+
+.input-container input,
+.checkbox-container input {
+    
+    flex: 1 1 100%; /* Asegura que los inputs ocupen el ancho completo disponible */
+    text-align: left; /* Alinea el texto dentro del input a la izquierda */
+    padding: 10px; /* Añade padding para mejor legibilidad */
+    font-size: 12px; /* Tamaño de fuente ajustado */
+    border-radius: 8px; /* Aplica bordes redondeados */
+    border: 1px solid #ccc; /* Añade un borde suave */
+    background-color: #f3f3f3; /* Color de fondo como el diseño proporcionado */
+    box-sizing: border-box; /* Incluye el padding y border en el ancho */
+}
+
+
+input[type="number"],
+select {
+    width: 100%; /* Ancho completo */
+    padding: 12px 18px; /* Ajuste del padding para una mejor presentación */
+    margin-top: 10px; /* Espaciado superior */
+    border: none; /* Elimina el borde predeterminado */
+    border-radius: 30px; /* Bordes redondeados */
+    background-color: #ddd; /* Color de fondo */
+    font-size: 12px; /* Tamaño de fuente ajustado a 12px */
+    box-sizing: border-box; /* Incluye el padding en el cálculo del ancho */
+   
+    outline: none; /* Elimina el contorno azul al hacer clic */
+    transition: background-color 0.3s ease; /* Transición suave para hover */
+    color: #333; /* Color de texto */
+}
+
+input[type="number"]:focus,
+select:focus {
+    background-color: #eee; /* Cambia el color de fondo cuando se enfoca */
+}
+
+
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.checkbox-container input[type="checkbox"] {
+    margin-left: 10px;
+    transform: scale(1.2);
+}
+
+
+/* Contenedor de botones */
+
+.button-container {
+    display: flex;
+    width: 100%;
+    max-width: 51%;
+    justify-content: space-between;
+    margin: auto;
+    
+}
+/* Estilo base para los botones */
+button.btn {
+    font-family: 'Roboto', sans-serif; 
+    padding: 10px;
+    font-size: 16px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+ 
+}
+
+button.btn i {
+    margin-right: 10px;
+}
+
+button.btn:hover {
+    background-color: #444;
+}
+
+.resultado-container, .table-container  {
+    background-color: #D9D9D9;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px auto;
+    MAX-WIDTH: 52%;
+    text-align: left;
+    
+    background-image: url(img/logodefondo.png);
+    background-repeat: no-repeat;
+}
+
+.resultado-item {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.table-container {
+    width: 90%;
+    margin: 30px auto;
+    overflow-x: auto;
+}
+
+table {
+    width: 100% auto;
+    border-collapse: collapse;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+table th,
+table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 14px;
+}
+
+thead {
+    background-color: #f0f0f0;
+}
+
+form-container {
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#info-tarjeta-credito {
+    margin: 10px auto;
+    padding: 15px;
+    background-color: #f8f8f8;
+    border-left: 5px solid #ff5252;
+    width: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#info-tarjeta-credito h2 {
+    display: flex;
+    align-items: center;
+    color: #333;
+    font-size: 12px;
+}
+
+#info-tarjeta-credito p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+}
+
+#incluir-fecha label {
+    font-size: 12px;
+}
+
+
+.table-container {
+ 
+    overflow-x: auto; /* Habilita el desplazamiento horizontal si es necesario */
+    -webkit-overflow-scrolling: touch; /* Suaviza el desplazamiento en dispositivos táctiles */
+}
+
+table {
+    width: 100%; /* La tabla toma todo el ancho disponible del contenedor */
+    border-collapse: collapse; /* Combina los bordes para un aspecto más limpio */
+    min-width: 800px; /* Asegura que la tabla tenga un ancho mínimo */
+}
+
+th, td {
+    padding: 10px; /* Espaciado interno para mejorar la legibilidad */
+    text-align: left; /* Alineación del texto a la izquierda */
+    border: 1px solid #ddd; /* Borde alrededor de cada celda */
+}
+
+thead {
+    background-color: #f4f4f4; /* Fondo para la fila de encabezado */
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Color alterno para filas pares */
+}
+
+/* estilo para el footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
